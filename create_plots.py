@@ -57,6 +57,10 @@ critter_color = 'rgb(34,139,34)'
 critter = "Critter"
 critter_offset = 9
 
+ian_color = 'rgb(255, 99, 159)'
+ian = "Ian"
+ian_offset = "10"
+
 dates = [
     "4/1/2020" ,
     "4/8/2020",
@@ -68,91 +72,99 @@ dates = [
     "5/20/2020",
     "5/27/2020",
     "6/3/2020",
-    "6/10/2020"]
+    "6/10/2020",
+    "6/17/2020"]
 
 """ Net Winnings """
 fig.add_trace(go.Bar(x=dates,
-                y=[-20.00, 70.00, -20.00, -10.91, 88.90, 22.40, -2.30, 32.60, 24.88, 42.31, -20],
+                y=[-20.00, 70.00, -20.00, -10.91, 88.90, 22.40, -2.30, 32.60, 24.88, 42.31, -20, -9.93],
                 name=greg + net,
                 marker_color=greg_color,
                 offsetgroup=greg_offset,
                 legendgroup=net
                 ))
 fig.add_trace(go.Bar(x=dates,
-                y=[20.00, 0, 0, 20.75, -40.00, 0, -9.94, 0, -37.16, 0, 0],
+                y=[20.00, 0, 0, 20.75, -40.00, 0, -9.94, 0, -37.16, 0, 0, 55.68],
                 name=bill + net,
                 marker_color=bill_color,
                 offsetgroup=bill_offset,
                 legendgroup=net
                 ))
 fig.add_trace(go.Bar(x=dates,
-                y=[104, -20, -60, 20.05, -36, 11.40, 3.69, 5.92, -23.54, -7.72, 2.20],
+                y=[104, -20, -60, 20.05, -36, 11.40, 3.69, 5.92, -23.54, -7.72, 2.20, -9.48],
                 name=hall + net,
                 marker_color=hall_color,
                 offsetgroup=hall_offset,
                 legendgroup=net
                 ))
 fig.add_trace(go.Bar(x=dates,
-                y=[-20, -30, 120, 9.81, -15.3, 6.2, -5.19, -20, 0, -3.46, -0.52],
+                y=[-20, -30, 120, 9.81, -15.3, 6.2, -5.19, -20, 0, -3.46, -0.52, 0],
                 name=gummel + net,
                 marker_color=gummel_color,
                 offsetgroup=gummel_offset,
                 legendgroup=net
                 ))
 fig.add_trace(go.Bar(x=dates,
-                y=[-20, 0, -20, -36.56, -14.60, 0, 13.74, -18.52, 0, 1.71, -15.47],
+                y=[-20, 0, -20, -36.56, -14.60, 0, 13.74, -18.52, 0, 1.71, -15.47, 23.61],
                 name=jann + net,
                 marker_color=jann_color,
                 offsetgroup=jann_offset,
                 legendgroup=net
                 ))
 fig.add_trace(go.Bar(x=dates,
-                y=[-20, -20, -20, 4.18, 17, -40, 0, 0, 0, -20, 53.19],
+                y=[-20, -20, -20, 4.18, 17, -40, 0, 0, 0, -20, 53.19, 0.12],
                 name=mantione + net,
                 marker_color=mantione_color,
                 offsetgroup=mantione_offset,
                 legendgroup=net
                 ))
 fig.add_trace(go.Bar(x=dates,
-                y=[-4, 0, 0, 0, 0, 0, 0, 0, 0, -20, 0],
+                y=[-4, 0, 0, 0, 0, 0, 0, 0, 0, -20, 0, 0],
                 name=figaniak + net,
                 marker_color=figaniak_color,
                 offsetgroup=figaniak_offset,
                 legendgroup=net
                 ))
 fig.add_trace(go.Bar(x=dates,
-                y=[0, 0, 0, -7.32, 0, 0, 0, 0, 0, 0, 0],
+                y=[0, 0, 0, -7.32, 0, 0, 0, 0, 0, 0, 0, 0],
                 name=mcgilloway + net,
                 marker_color=mcgilloway_color,
                 offsetgroup=mcgilloway_offset,
                 legendgroup=net
                 ))
 fig.add_trace(go.Bar(x=dates,
-                y=[0, 0, 0, 0, 0, 0, 0, 0, 35.82, 0, 0],
+                y=[0, 0, 0, 0, 0, 0, 0, 0, 35.82, 0, 0, 0],
                 name=sean + net,
                 marker_color=sean_color,
                 offsetgroup=sean_offset,
                 legendgroup=net
                 ))
 fig.add_trace(go.Bar(x=dates,
-                y=[0, 0, 0, 0, 0, 0, 0, 0, 0, 7.16, 0],
+                y=[0, 0, 0, 0, 0, 0, 0, 0, 0, 7.16, 0, 0],
                 name=sykes + net,
                 marker_color=sykes_color,
                 offsetgroup=sykes_offset,
                 legendgroup=net
                 ))
 fig.add_trace(go.Bar(x=dates,
-                y=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -20],
+                y=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -20, -20],
                 name=critter + net,
                 marker_color=critter_color,
                 offsetgroup=critter_offset,
+                legendgroup=net
+                ))
+fig.add_trace(go.Bar(x=dates,
+                y=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -40],
+                name=ian + net,
+                marker_color=ian_color,
+                offsetgroup=ian_offset,
                 legendgroup=net
                 ))
 
 """ Buy-ins """
 opacity = 0.15
 fig.add_trace(go.Bar(x=dates,
-                y=[-20, -20, -20, -80, -20, -20, -20, -20, -20, -20, -20],
+                y=[-20, -20, -20, -80, -20, -20, -20, -20, -20, -20, -20, -20],
                 name=greg + buyin,
                 marker_color=greg_color,
                 opacity=opacity,
@@ -160,7 +172,7 @@ fig.add_trace(go.Bar(x=dates,
                 legendgroup=buyin,
                 ))
 fig.add_trace(go.Bar(x=dates,
-                y=[-20, 0, -20, -20, -40, 0, -20, 0, -60, 0, 0],
+                y=[-20, 0, -20, -20, -40, 0, -20, 0, -60, 0, 0, -20],
                 name=bill + buyin,
                 marker_color=bill_color,
                 opacity=opacity,
@@ -168,7 +180,7 @@ fig.add_trace(go.Bar(x=dates,
                 legendgroup=buyin,
                 ))
 fig.add_trace(go.Bar(x=dates,
-                y=[-20, -20, -60, -20, -40, -20, -20, -20, -40, -40, -20],
+                y=[-20, -20, -60, -20, -40, -20, -20, -20, -40, -40, -20, -40],
                 name=hall + buyin,
                 marker_color=hall_color,
                 opacity=opacity,
@@ -176,7 +188,7 @@ fig.add_trace(go.Bar(x=dates,
                 legendgroup=buyin,
                 ))
 fig.add_trace(go.Bar(x=dates,
-                y=[-20, -30, -20, -20, -40, -20, -20, -20, 0, -40, -20],
+                y=[-20, -30, -20, -20, -40, -20, -20, -20, 0, -40, -20, 0],
                 name=gummel + buyin,
                 marker_color=gummel_color,
                 opacity=opacity,
@@ -184,7 +196,7 @@ fig.add_trace(go.Bar(x=dates,
                 legendgroup=buyin,
                 ))
 fig.add_trace(go.Bar(x=dates,
-                y=[-20, 0, -20, -40, -20, 0, -20, -40, 0, -20, -40],
+                y=[-20, 0, -20, -40, -20, 0, -20, -40, 0, -20, -40, -20],
                 name=jann + buyin,
                 marker_color=jann_color,
                 opacity=opacity,
@@ -192,7 +204,7 @@ fig.add_trace(go.Bar(x=dates,
                 legendgroup=buyin,
                 ))
 fig.add_trace(go.Bar(x=dates,
-                y=[-20, -20, -20, -20, -20, -40, 0, 0, 0, -20, -20],
+                y=[-20, -20, -20, -20, -20, -40, 0, 0, 0, -20, -20, -20],
                 name=mantione + buyin,
                 marker_color=mantione_color,
                 opacity=opacity,
@@ -200,7 +212,7 @@ fig.add_trace(go.Bar(x=dates,
                 legendgroup=buyin,
                 ))
 fig.add_trace(go.Bar(x=dates,
-                y=[-20, 0, 0, 0, 0, 0, 0, 0, 0, -20, 0],
+                y=[-20, 0, 0, 0, 0, 0, 0, 0, 0, -20, 0, 0],
                 name=figaniak + buyin,
                 marker_color=figaniak_color,
                 opacity=opacity,
@@ -208,7 +220,7 @@ fig.add_trace(go.Bar(x=dates,
                 legendgroup=buyin,
                 ))
 fig.add_trace(go.Bar(x=dates,
-                y=[0, 0, 0, -20, 0, 0, 0, 0, 0, 0, 0],
+                y=[0, 0, 0, -20, 0, 0, 0, 0, 0, 0, 0, 0],
                 name=mcgilloway + buyin,
                 marker_color=mcgilloway_color,
                 opacity=opacity,
@@ -216,7 +228,7 @@ fig.add_trace(go.Bar(x=dates,
                 legendgroup=buyin,
                 ))
 fig.add_trace(go.Bar(x=dates,
-                y=[0, 0, 0, 0, 0, 0, 0, 0, -20, 0, 0],
+                y=[0, 0, 0, 0, 0, 0, 0, 0, -20, 0, 0, 0],
                 name=sean + buyin,
                 marker_color=sean_color,
                 opacity=opacity,
@@ -224,7 +236,7 @@ fig.add_trace(go.Bar(x=dates,
                 legendgroup=buyin,
                 ))
 fig.add_trace(go.Bar(x=dates,
-                y=[0, 0, 0, 0, 0, 0, 0, 0, 0, -40, 0],
+                y=[0, 0, 0, 0, 0, 0, 0, 0, 0, -40, 0, 0],
                 name=sykes + buyin,
                 marker_color=sykes_color,
                 opacity=opacity,
@@ -232,79 +244,93 @@ fig.add_trace(go.Bar(x=dates,
                 legendgroup=buyin,
                 ))
 fig.add_trace(go.Bar(x=dates,
-                y=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -20],
+                y=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -20, -20],
                 name=critter + buyin,
                 marker_color=critter_color,
                 opacity=opacity,
                 offsetgroup=critter_offset,
                 legendgroup=buyin,
                 ))
+fig.add_trace(go.Bar(x=dates,
+                y=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -40],
+                name=ian + buyin,
+                marker_color=ian_color,
+                opacity=opacity,
+                offsetgroup=ian_offset,
+                legendgroup=buyin,
+                ))
 
 """ Cumulative Winnings """
 fig.add_trace(go.Line(x=dates,
-                y=[-20.00, 50.00, 30.00, 19.09, 107.99, 130.39, 128.09, 160.69, 185.57, 227.88, 207.88],
+                y=[-20.00, 50.00, 30.00, 19.09, 107.99, 130.39, 128.09, 160.69, 185.57, 227.88, 207.88, 197.95],
                 name=greg + cumulative,
                 marker_color=greg_color,
                 legendgroup=cumulative,
                 ))
 fig.add_trace(go.Line(x=dates,
-                y=[-20, -20, -20, 0.75, -39.25, -39.25, -49.19, -49.19, -86.35, -86.35, -86.35],
+                y=[-20, -20, -20, 0.75, -39.25, -39.25, -49.19, -49.19, -86.35, -86.35, -86.35, -30.67],
                 name=bill + cumulative,
                 marker_color=bill_color,
                 legendgroup=cumulative,
                 ))
 fig.add_trace(go.Line(x=dates,
-                y=[104, 84, 24, 44.05, 8.05, 19.45, 23.14, 29.06, 5.52, -2.20, 0.00],
+                y=[104, 84, 24, 44.05, 8.05, 19.45, 23.14, 29.06, 5.52, -2.20, 0.00, -9.48],
                 name=hall + cumulative,
                 marker_color=hall_color,
                 legendgroup=cumulative,
                 ))
 fig.add_trace(go.Line(x=dates,
-                y=[-20, -50, 70, 79.81, 64.51, 70.71, 65.52, 45.52, 45.52, 42.06, 41.54],
+                y=[-20, -50, 70, 79.81, 64.51, 70.71, 65.52, 45.52, 45.52, 42.06, 41.54, 41.54],
                 name=gummel + cumulative,
                 marker_color=gummel_color,
                 legendgroup=cumulative,
                 ))
 fig.add_trace(go.Line(x=dates,
-                y=[-20, -20, -40, -76.56, -91.16, -91.16, -77.42, -95.94, -95.94, -94.23, -109.70],
+                y=[-20, -20, -40, -76.56, -91.16, -91.16, -77.42, -95.94, -95.94, -94.23, -109.70, -86.09],
                 name=jann + cumulative,
                 marker_color=jann_color,
                 legendgroup=cumulative,
                 ))
 fig.add_trace(go.Line(x=dates,
-                y=[-20, -40, -60, -55.82, -38.82, -78.82, -78.82, -78.82, -78.82, -98.82, -45.63],
+                y=[-20, -40, -60, -55.82, -38.82, -78.82, -78.82, -78.82, -78.82, -98.82, -45.63, -45.51],
                 name=mantione + cumulative,
                 marker_color=mantione_color,
                 legendgroup=cumulative,
                 ))
 fig.add_trace(go.Line(x=dates,
-                y=[-4,-4,-4,-4,-4,-4,-4,-4, -4, -24, -24],
+                y=[-4,-4,-4,-4,-4,-4,-4,-4, -4, -24, -24, -24],
                 name=figaniak + cumulative,
                 marker_color=figaniak_color,
                 legendgroup=cumulative,
                 ))
 fig.add_trace(go.Line(x=dates,
-                y=[0, 0, 0, -7.32, -7.32, -7.32, -7.32, -7.32, -7.32, -7.32, -7.32],
+                y=[0, 0, 0, -7.32, -7.32, -7.32, -7.32, -7.32, -7.32, -7.32, -7.32, -7.32],
                 name=mcgilloway + cumulative,
                 marker_color=mcgilloway_color,
                 legendgroup=cumulative,
                 ))
 fig.add_trace(go.Line(x=dates,
-                y=[0, 0, 0, 0, 0, 0, 0, 0, 35.82, 35.82, 35.82],
+                y=[0, 0, 0, 0, 0, 0, 0, 0, 35.82, 35.82, 35.82, 35.82],
                 name=sean + cumulative,
                 marker_color=sean_color,
                 legendgroup=cumulative,
                 ))
 fig.add_trace(go.Line(x=dates,
-                y=[0, 0, 0, 0, 0, 0, 0, 0, 0, 7.16, 7.16],
+                y=[0, 0, 0, 0, 0, 0, 0, 0, 0, 7.16, 7.16, 7.16],
                 name=sykes + cumulative,
                 marker_color=sykes_color,
                 legendgroup=cumulative,
                 ))
 fig.add_trace(go.Line(x=dates,
-                y=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -20],
+                y=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -20, -60],
                 name=critter + cumulative,
                 marker_color=critter_color,
+                legendgroup=cumulative,
+                ))
+fig.add_trace(go.Line(x=dates,
+                y=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -40],
+                name=ian + cumulative,
+                marker_color=ian_color,
                 legendgroup=cumulative,
                 ))
 
