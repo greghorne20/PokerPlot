@@ -60,9 +60,6 @@ for name in names:
             cumulative.append(round(sum(filter(None, net)), 2))
             datesPlayed.append(date)
 
-
-
-
     color = colors[offset]
 
     print(name)
